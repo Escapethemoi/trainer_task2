@@ -15,6 +15,7 @@ export default function Custtrainlist() {
 
     const columns = [
         {
+            filterable: false,
             Header: 'Date',
             accessor: 'date'
         },
@@ -33,12 +34,12 @@ export default function Custtrainlist() {
         {
             Header: 'Customers Last Name',
             accessor: 'customer.lastname'
-        }
+        },
     ]
 
     return (
         <div>
-            <h2>Trainings</h2>
+            <h2>Overview of training events</h2>
             <ReactTable minRows={0} filterable={true} data={custtrains} columns={columns} />
         </div>
     )
